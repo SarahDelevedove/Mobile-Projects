@@ -1,10 +1,10 @@
 import React from 'react';
 import { View, Text } from 'react-native';
 
-const Greeting = () => {
+const Greeting = (props) => {
   return(
     <View style={{alignItems: 'center'}}> 
-      <Text style={{fontsize: 26}}>Hello World!</Text>
+      <Text style={{fontsize: 26}}>Hello {props.name}</Text>
     </View>
   )
 
@@ -14,8 +14,8 @@ const Greeting = () => {
 export default function LotsOfGreetings(){
   return(
     <View style={{alignItems: 'center', top: 100}}> 
-      <Greeting />
-
+      <Greeting name="Sarah" />
+      <Greeting name="Gisele" />
 
     </View>
   )
